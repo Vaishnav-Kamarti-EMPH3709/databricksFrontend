@@ -1,0 +1,4 @@
+command:
+  - "bash"
+  - "-c"
+  - "cd Frontend && npm run start"
