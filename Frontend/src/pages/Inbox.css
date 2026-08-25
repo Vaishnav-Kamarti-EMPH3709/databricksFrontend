@@ -1,0 +1,657 @@
+/* =========================================
+   INBOX PAGE
+========================================= */
+
+.inbox-page {
+  min-height: 100vh;
+  padding: 42px 48px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 42px;
+}
+
+.inbox-header-left h1 {
+  margin: 0;
+  color: #123b70;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.inbox-header-left p {
+  margin: 9px 0 0;
+  color: #718198;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   COUNT
+========================================= */
+
+.inbox-count-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 15px;
+
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-radius: 20px;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+
+  box-shadow: 0 2px 7px rgba(15, 47, 95, 0.05);
+}
+
+.inbox-count-number {
+  color: #1261d6;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.inbox-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.inbox-section-header h2 {
+  margin: 0;
+
+  color: #123b70;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.inbox-section-count {
+  color: #718198;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   INCIDENT LIST
+========================================= */
+
+.inbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* =========================================
+   INCIDENT CARD
+========================================= */
+
+.inbox-card {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ee;
+  border-radius: 10px;
+
+  padding: 22px 26px;
+
+  box-shadow: 0 2px 8px rgba(15, 47, 95, 0.035);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.inbox-card:hover {
+  border-color: #c4d8f2;
+
+  box-shadow:
+    0 6px 18px rgba(15, 47, 95, 0.07);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.inbox-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.inbox-incident-id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #0757ad;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inbox-status-dot {
+  width: 9px;
+  height: 9px;
+
+  display: inline-block;
+
+  background: #94a3b8;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   PRIORITY
+========================================= */
+
+.inbox-priority {
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.inbox-details {
+  display: grid;
+
+  grid-template-columns:
+    minmax(140px, 1fr)
+    minmax(140px, 1fr)
+    minmax(180px, 1.25fr)
+    minmax(160px, 1fr);
+
+  column-gap: 35px;
+  row-gap: 22px;
+
+  padding: 22px 0;
+}
+
+.inbox-detail {
+  min-width: 0;
+}
+
+.inbox-detail-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8a99ac;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.inbox-detail-value {
+  display: block;
+
+  color: #123b70;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.inbox-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.inbox-open-date {
+  color: #8190a5;
+  font-size: 12px;
+}
+
+.inbox-view-details {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 4px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #1261d6;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.inbox-view-details span {
+  font-size: 17px;
+  line-height: 1;
+
+  transition: transform 0.15s ease;
+}
+
+.inbox-view-details:hover {
+  color: #084da8;
+}
+
+.inbox-view-details:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.inbox-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  backdrop-filter: blur(3px);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.inbox-modal {
+  width: min(900px, 100%);
+
+  max-height: 88vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.25);
+
+  animation: inboxModalOpen 0.18s ease-out;
+}
+
+@keyframes inboxModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.inbox-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 25px 28px;
+
+  border-bottom: 1px solid #e8edf3;
+}
+
+.inbox-modal-id {
+  margin-bottom: 5px;
+
+  color: #1261d6;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.inbox-modal-header h2 {
+  margin: 0;
+
+  color: #123b70;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.inbox-modal-close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.inbox-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+
+/* =========================================
+   MODAL TITLE
+========================================= */
+
+.inbox-modal-title-section {
+  padding: 24px 28px 10px;
+}
+
+.modal-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8a99ac;
+
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.modal-title {
+  color: #1e3a5f;
+
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   MODAL GRID
+========================================= */
+
+.inbox-modal-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  margin: 20px 28px;
+
+  overflow: hidden;
+
+  border: 1px solid #e3e9f0;
+  border-radius: 9px;
+
+  background: #e3e9f0;
+}
+
+.modal-detail {
+  min-width: 0;
+
+  padding: 15px 17px;
+
+  background: #ffffff;
+}
+
+.modal-detail span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8a99ac;
+
+  font-size: 11px;
+}
+
+.modal-detail strong {
+  display: block;
+
+  color: #123b70;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.modal-description-section {
+  padding: 10px 28px 18px;
+}
+
+.modal-description {
+  padding: 15px;
+
+  max-height: 180px;
+
+  overflow-y: auto;
+
+  border: 1px solid #e3e9f0;
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+.inbox-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 18px 28px;
+
+  border-top: 1px solid #e8edf3;
+}
+
+.modal-close-button {
+  padding: 9px 18px;
+
+  border: 1px solid #d5deea;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   LOADING / ERROR / EMPTY
+========================================= */
+
+.inbox-loading {
+  padding: 80px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.inbox-error {
+  padding: 20px;
+
+  border: 1px solid #fecdd3;
+  border-radius: 8px;
+
+  background: #fff1f2;
+
+  color: #be123c;
+}
+
+.inbox-empty {
+  padding: 70px;
+
+  text-align: center;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .inbox-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inbox-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .inbox-page {
+    padding: 25px 20px;
+  }
+
+  .inbox-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .inbox-details {
+    grid-template-columns: 1fr;
+  }
+
+  .inbox-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inbox-card {
+    padding: 18px;
+  }
+
+  .inbox-modal-overlay {
+    padding: 15px;
+  }
+
+  .inbox-modal-header {
+    padding: 20px;
+  }
+
+  .inbox-modal-title-section,
+  .modal-description-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .inbox-modal-grid {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .inbox-modal-footer {
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,711 @@
+/* =========================================
+   THIS WEEK PAGE
+========================================= */
+
+.this-week-page {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 10px 0 40px;
+
+  color: #17233c;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.this-week-header {
+  width: 100%;
+
+  margin-bottom: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.this-week-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #17233c;
+}
+
+.this-week-header p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #68758a;
+}
+
+
+/* =========================================
+   OVERVIEW CARDS
+========================================= */
+
+.week-overview {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.week-card {
+  min-height: 115px;
+
+  padding: 20px 22px;
+
+  border-radius: 12px;
+
+  border: 1px solid;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  box-shadow: 0 4px 12px rgba(40, 60, 90, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.week-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(40, 60, 90, 0.09);
+}
+
+.week-card span {
+  font-size: 15px;
+
+  color: #52617a;
+}
+
+.week-card strong {
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+
+/* TOTAL */
+
+.total-card {
+  background: #eef6ff;
+  border-color: #b8d5f7;
+}
+
+.total-card strong {
+  color: #1769df;
+}
+
+
+/* HIGH */
+
+.high-card {
+  background: #fff1f1;
+  border-color: #f5bcbc;
+}
+
+.high-card strong {
+  color: #d62929;
+}
+
+
+/* SLA */
+
+.sla-card {
+  background: #f1faed;
+  border-color: #b9ddb1;
+}
+
+.sla-card strong {
+  color: #238b3d;
+}
+
+
+/* REOPENED */
+
+.reopened-card {
+  background: #fff6e8;
+  border-color: #f1cf91;
+}
+
+.reopened-card strong {
+  color: #c47a00;
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.week-section {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e3ef;
+
+  border-radius: 12px;
+
+  padding: 22px;
+
+  margin-bottom: 24px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 14px rgba(40, 60, 90, 0.05);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.section-header h3 {
+  margin: 0 0 4px;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  color: #153b75;
+}
+
+.section-header p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #718096;
+}
+
+
+/* =========================================
+   TREND LEGEND
+========================================= */
+
+.trend-legend {
+  display: flex;
+
+  gap: 18px;
+}
+
+.trend-legend span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 13px;
+
+  color: #59677c;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+}
+
+.legend-dot.opened {
+  background: #1769df;
+}
+
+.legend-dot.closed {
+  background: #238b3d;
+}
+
+.legend-dot.remaining {
+  background: #e87516;
+}
+
+
+/* =========================================
+   TABLE CONTAINERS
+   TREND + CATEGORY
+========================================= */
+
+.trend-table,
+.category-table {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e3ef;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TABLE ROWS
+   TREND + CATEGORY
+========================================= */
+
+.trend-row,
+.category-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+
+  align-items: center;
+
+  min-height: 58px;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf0f4;
+
+  box-sizing: border-box;
+
+  transition: background 0.2s ease;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   FORCE CELL ALIGNMENT
+========================================= */
+
+.trend-row > span,
+.category-row > span {
+  text-align: left;
+
+  justify-self: start;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.trend-row.trend-header,
+.category-row.category-header {
+  min-height: 46px;
+
+  background: #f1f6fc;
+
+  border-bottom: 1px solid #d9e3ef;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #52617a;
+
+  text-align: left;
+}
+
+.trend-row.trend-header > span,
+.category-row.category-header > span {
+  text-align: left;
+
+  justify-self: start;
+}
+
+
+/* =========================================
+   LAST ROW
+========================================= */
+
+.trend-row:last-child,
+.category-row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.trend-row:not(.trend-header):hover,
+.category-row:not(.category-header):hover {
+  background: #f5f9ff;
+}
+
+
+/* =========================================
+   DATE + CATEGORY NAME
+========================================= */
+
+.trend-date,
+.category-name {
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #34435c;
+
+  text-align: left !important;
+
+  justify-self: start !important;
+}
+
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+.trend-number,
+.category-number {
+  font-size: 18px;
+
+  font-weight: 700;
+
+  text-align: left !important;
+
+  justify-self: start !important;
+}
+
+
+/* =========================================
+   OPENED
+========================================= */
+
+.opened-number {
+  color: #1769df !important;
+}
+
+
+/* =========================================
+   CLOSED
+========================================= */
+
+.closed-number {
+  color: #238b3d !important;
+}
+
+
+/* =========================================
+   REMAINING
+========================================= */
+
+.remaining-number {
+  color: #e87516 !important;
+
+  text-align: left !important;
+
+  justify-self: start !important;
+}
+
+
+/* =========================================
+   CATEGORY SPECIFIC SAFETY RULES
+========================================= */
+
+.category-table .category-name {
+  color: #34435c !important;
+}
+
+.category-table .category-number {
+  font-size: 18px;
+
+  font-weight: 700;
+
+  text-align: left !important;
+
+  justify-self: start !important;
+}
+
+.category-table .category-number.opened-number {
+  color: #1769df !important;
+}
+
+.category-table .category-number.closed-number {
+  color: #238b3d !important;
+}
+
+.category-table .category-number.remaining-number {
+  color: #e87516 !important;
+}
+
+
+/* =========================================
+   AI SUMMARY
+========================================= */
+
+.ai-summary {
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #f4efff,
+    #eef5ff
+  );
+
+  border: 1px solid #d3c1f1;
+
+  border-radius: 12px;
+
+  padding: 24px;
+
+  margin-bottom: 30px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 14px rgba(40, 60, 90, 0.05);
+}
+
+
+/* =========================================
+   AI HEADER
+========================================= */
+
+.ai-summary-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.ai-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #7138c8;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  box-shadow: 0 4px 10px rgba(113, 56, 200, 0.2);
+}
+
+.ai-summary h3 {
+  margin: 0;
+
+  color: #7138c8;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.ai-summary-header p {
+  margin: 3px 0 0;
+
+  color: #68758a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   AI LIST
+========================================= */
+
+.ai-summary ul {
+  margin: 0;
+
+  padding-left: 22px;
+}
+
+.ai-summary li {
+  margin: 9px 0;
+
+  color: #43516a;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.this-week-page::-webkit-scrollbar {
+  width: 7px;
+}
+
+.this-week-page::-webkit-scrollbar-track {
+  background: #f1f3f6;
+
+  border-radius: 10px;
+}
+
+.this-week-page::-webkit-scrollbar-thumb {
+  background: #b8c4d4;
+
+  border-radius: 10px;
+}
+
+.this-week-page::-webkit-scrollbar-thumb:hover {
+  background: #8e9caf;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+  .week-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .this-week-page {
+    padding-right: 5px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 700px
+========================================= */
+
+@media (max-width: 700px) {
+  .week-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .trend-legend {
+    gap: 12px;
+
+    flex-wrap: wrap;
+  }
+
+  .trend-row,
+  .category-row {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+
+    padding: 0 10px;
+  }
+
+  .trend-date,
+  .category-name {
+    font-size: 14px;
+  }
+
+  .trend-number,
+  .category-number {
+    font-size: 16px;
+  }
+
+  .week-section {
+    padding: 16px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 500px
+========================================= */
+
+@media (max-width: 500px) {
+  .this-week-page {
+    padding: 8px 0 30px;
+  }
+
+  .this-week-header h2 {
+    font-size: 26px;
+  }
+
+  .week-card strong {
+    font-size: 28px;
+  }
+
+  .trend-row,
+  .category-row {
+    min-height: 52px;
+
+    grid-template-columns:
+      1.2fr
+      0.9fr
+      0.9fr
+      1fr;
+
+    padding: 0 8px;
+  }
+
+  .trend-row.trend-header,
+  .category-row.category-header {
+    font-size: 11px;
+  }
+
+  .trend-date,
+  .category-name {
+    font-size: 13px;
+  }
+
+  .trend-number,
+  .category-number {
+    font-size: 15px;
+  }
+
+  .trend-legend {
+    flex-wrap: wrap;
+  }
+
+  .ai-summary {
+    padding: 18px;
+  }
+}

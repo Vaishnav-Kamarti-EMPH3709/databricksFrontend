@@ -1,0 +1,247 @@
+/* =========================================
+   ACTIONS PAGE
+========================================= */
+
+.actions-page {
+  min-height: 100%;
+  padding: 32px 40px 50px;
+  background: #f7f9fc;
+  color: #102a56;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.actions-header {
+  margin-bottom: 32px;
+}
+
+.actions-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d2d63;
+}
+
+.actions-header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #6b7c99;
+}
+
+
+/* =========================================
+   RECOMMENDED SECTION
+========================================= */
+
+.recommended-section {
+  width: 100%;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #102a56;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   ACTION CARD
+========================================= */
+
+.action-card {
+  max-width: 900px;
+  background: #ffffff;
+  border: 1px solid #d9e3f0;
+  border-radius: 10px;
+  padding: 24px 26px;
+  box-shadow: 0 3px 12px rgba(30, 70, 120, 0.06);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.action-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-severity {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.action-severity.high {
+  color: #e53935;
+}
+
+.action-priority {
+  font-size: 12px;
+  font-weight: 700;
+  color: #d32f2f;
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================
+   ACTION TITLE
+========================================= */
+
+.action-card h3 {
+  margin: 0 0 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #12366d;
+}
+
+
+/* =========================================
+   REASON
+========================================= */
+
+.action-reason {
+  max-width: 760px;
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #536985;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.action-details {
+  display: flex;
+  gap: 55px;
+  padding: 20px 0;
+  border-top: 1px solid #edf1f6;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.action-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.action-details span {
+  font-size: 12px;
+  color: #7b8ba3;
+}
+
+.action-details strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #193b70;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.action-buttons button {
+  height: 36px;
+  padding: 0 17px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+/* APPROVE */
+
+.approve-btn {
+  border: 1px solid #2474dc;
+  background: #2474dc;
+  color: #ffffff;
+}
+
+.approve-btn:hover {
+  background: #1d63bd;
+}
+
+
+/* ADJUST */
+
+.adjust-btn {
+  border: 1px solid #cbd6e5;
+  background: #ffffff;
+  color: #31557f;
+}
+
+.adjust-btn:hover {
+  background: #f4f7fb;
+}
+
+
+/* RE-RUN */
+
+.rerun-btn {
+  border: 1px solid #cbd6e5;
+  background: #ffffff;
+  color: #31557f;
+}
+
+.rerun-btn:hover {
+  background: #f4f7fb;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .actions-page {
+    padding: 24px 20px 40px;
+  }
+
+  .action-card {
+    padding: 20px;
+  }
+
+  .action-details {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+
+}
+
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.action-card {
+  max-width: 100%;
+}
