@@ -1,4 +1,6 @@
 command:
+  - "cd"
+  - "Frontend"
   - "npm"
   - "run"
   - "start"
